@@ -13,7 +13,7 @@ source=("$pkgname-$pkgver.tar.gz::https://github.com/touchfish-devs/TouchFish-AU
 sha256sums=('SKIP')
 
 prepare() {
-    cd "$srcdir/$pkgname-$pkgver"
+    cd "$srcdir/TouchFish-AUR-$pkgver"
     cat > "$pkgname.desktop" << EOF
 [Desktop Entry]
 Type=Application
@@ -29,7 +29,7 @@ EOF
 build() {}
 
 package() {
-    cd "$srcdir/$pkgname-$pkgver"
+    cd "$srcdir/TouchFish-AUR-$pkgver"
 
     # 安装主程序
     install -Dm755 LTS.py "$pkgdir/usr/bin/$pkgname"
