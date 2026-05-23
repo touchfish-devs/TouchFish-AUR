@@ -1,4 +1,4 @@
-Maintainer: TouchFish Community <johnchiao@outlook.com>
+# Maintainer: TouchFish Community <johnchiao@outlook.com>
 pkgname=touchfish
 pkgver=4.7.0
 pkgrel=1
@@ -26,7 +26,9 @@ Categories=Network;InstantMessaging;
 EOF
 }
 
-build() {}
+build() {
+    true
+}
 
 package() {
     cd "$srcdir/TouchFish-AUR-$pkgver"
